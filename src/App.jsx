@@ -1,6 +1,7 @@
 import Hero from "./components/hero/Hero"
 import SignIn from "./components/sign-in/SignIn";
 import Statistics from "./components/statistics/Statistics"
+import Footer from "./components/footer/Footer";
 
 import Subscribe from "./components/subscribe/Subscribe"
 import "./styles.css"
@@ -19,6 +20,7 @@ function App() {
       <Subscribe />
       <Statistics />
       <SignIn />
+      <Footer />
     </>
   )
 }

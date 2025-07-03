@@ -6,7 +6,7 @@ Welcome to the **NextDev Client** – the frontend for a modern web app connecti
 ---
 
 ## 🖥️ Tech Stack
-- **Frontend**: React.js (**Tailwind CSS**,**ChakraUI**,**MaterailUI**,**DaisyUI** for styling)
+- **Frontend**: React.js (**Tailwind CSS**,**ChakraUI**,**MaterailUI**,**DaisyUI**,**hyperui** for styling)
 - **Backend**: Express.js, Node.js
 - **Database**: PostgreSQL
 
