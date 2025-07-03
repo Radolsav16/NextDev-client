@@ -1,11 +1,12 @@
-
+import Hero from "./components/hero/Hero"
+import "./styles.css"
 
 function App() {
  
 
   return (
     <>
-      <h1>Hello NextDev</h1>
+      <Hero />
      
     </>
   )
