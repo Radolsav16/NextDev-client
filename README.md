@@ -28,9 +28,5 @@ Welcome to the **NextDev Client** – the frontend for a modern web app connecti
 - View applicant profiles and CVs
 - Manage and edit job posts
 - Communicate with developers
-### 📰 Developer News Feed
-- Latest tech articles via external APIs
-- Curated updates from Dev.to, Hacker News, etc.
 
 ---
-
