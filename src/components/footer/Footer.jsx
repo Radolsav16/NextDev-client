@@ -5,7 +5,7 @@ import { Link } from 'react-router'
 export default function Footer(){
     return(
         <>
-       <footer className="bg-white border-t border-gray-100 mt-20">
+       <footer className="bg-white border-t border-gray-100">
   <div className="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 space-y-12">
     
     <div className="flex flex-col-reverse items-center justify-between gap-8 sm:flex-row">
@@ -49,46 +49,6 @@ export default function Footer(){
       </ul>
     </div>
 
-    {/* Grid of Links */}
-    <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4">
-      <div>
-        <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide">Services</p>
-        <ul className="mt-4 space-y-2 text-sm text-gray-600">
-          <li><a href="#" className="hover:text-gray-800">1on1 Coaching</a></li>
-          <li><a href="#" className="hover:text-gray-800">Company Review</a></li>
-          <li><a href="#" className="hover:text-gray-800">Accounts Review</a></li>
-          <li><a href="#" className="hover:text-gray-800">HR Consulting</a></li>
-          <li><a href="#" className="hover:text-gray-800">SEO Optimization</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide">Company</p>
-        <ul className="mt-4 space-y-2 text-sm text-gray-600">
-          <li><a href="#" className="hover:text-gray-800">About</a></li>
-          <li><a href="#" className="hover:text-gray-800">Meet the Team</a></li>
-          <li><a href="#" className="hover:text-gray-800">Careers</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide">Helpful Links</p>
-        <ul className="mt-4 space-y-2 text-sm text-gray-600">
-          <li><a href="#" className="hover:text-gray-800">Contact</a></li>
-          <li><a href="#" className="hover:text-gray-800">FAQs</a></li>
-          <li><a href="#" className="hover:text-gray-800">Live Chat</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <p className="text-sm font-semibold text-gray-900 uppercase tracking-wide">Legal</p>
-        <ul className="mt-4 space-y-2 text-sm text-gray-600">
-          <li><a href="#" className="hover:text-gray-800">Accessibility</a></li>
-          <li><a href="#" className="hover:text-gray-800">Privacy Policy</a></li>
-          <li><a href="#" className="hover:text-gray-800">Terms of Service</a></li>
-        </ul>
-      </div>
-    </div>
 
     <p className="text-xs text-gray-500 text-center">&copy; 2025 Radoslav Todorov. All rights reserved.</p>
   </div>

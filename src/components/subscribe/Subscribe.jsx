@@ -6,10 +6,9 @@ export default function Subscribe() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
           <div className="max-w-xl lg:max-w-lg">
-            <h2 className="text-4xl font-semibold tracking-tight text-white">Subscribe to our newsletter</h2>
+            <h2 className="text-4xl font-semibold tracking-tight text-white">Stay Updated with Dev News & Job Alerts</h2>
             <p className="mt-4 text-lg text-gray-300">
-              Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing velit quis. Duis tempor incididunt
-              dolore.
+               Subscribe to get the latest developer news, job opportunities, and updates from NextDev — straight to your inbox.
             </p>
             <div className="mt-6 flex max-w-md gap-x-4">
               <label htmlFor="email-address" className="sr-only">
@@ -39,16 +38,16 @@ export default function Subscribe() {
               </div>
               <dt className="mt-4 text-base font-semibold text-white">Weekly articles</dt>
               <dd className="mt-2 text-base/7 text-gray-400">
-                Non laboris consequat cupidatat laborum magna. Eiusmod non irure cupidatat duis commodo amet.
+                Stay ahead with curated news, portfolio tips, and resources to grow as a developer.
               </dd>
             </div>
             <div className="flex flex-col items-start">
               <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
                 <HandRaisedIcon aria-hidden="true" className="size-6 text-white" />
               </div>
-              <dt className="mt-4 text-base font-semibold text-white">No spam</dt>
+              <dt className="mt-4 text-base font-semibold text-white">Junior Dev Jobs</dt>
               <dd className="mt-2 text-base/7 text-gray-400">
-                Officia excepteur ullamco ut sint duis proident non adipisicing. Voluptate incididunt anim.
+                We’ll send you relevant, junior-friendly job openings tailored to your skill level and interests.
               </dd>
             </div>
           </dl>
