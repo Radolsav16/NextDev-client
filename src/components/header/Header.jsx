@@ -10,7 +10,7 @@ const navigation = [
   { name: 'Dashboard', href: '#' },
   { name: 'About', href: '#' },
   { name: 'Dev News', href: '#' },
-  { name: 'Sign In', href: '/next-dev/sign-in' },
+  { name: 'Sign up', href: '/next-dev/sign-up' },
 ]
 
 export default function  Header(){
@@ -49,9 +49,9 @@ export default function  Header(){
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm/6 font-semibold text-gray-900">
-              Log in <span aria-hidden="true">&rarr;</span>
-            </a>
+            <Link to="/next-dev/sign-up" className="text-sm/6 font-semibold text-gray-900">
+              Sign in <span aria-hidden="true">&rarr;</span>
+            </Link>
           </div>
         </nav>
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
@@ -62,7 +62,7 @@ export default function  Header(){
                 <span className="sr-only">Your Company</span>
                 <img
                   alt=""
-                  src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                  src="/next-dev.png"
                   className="h-8 w-auto"
                 />
               </a>
@@ -79,22 +79,22 @@ export default function  Header(){
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
                       href={item.href}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
                 <div className="py-6">
-                  <a
-                    href="#"
+                  <Link
+                    to="/next-dev/sign-in"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
                   >
-                    Log in
-                  </a>
+                    Sign in
+                  </Link>
                 </div>
               </div>
             </div>

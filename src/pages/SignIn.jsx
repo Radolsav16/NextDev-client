@@ -1,4 +1,3 @@
-import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
@@ -13,8 +12,8 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import MuiCard from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
-import AppTheme from '../material-ui/AppTheme';
-import { GoogleIcon ,FacebookIcon ,SitemarkIcon } from '../material-ui/CustomIcons'; 
+
+import { GoogleIcon ,FacebookIcon } from '../material-ui/CustomIcons'; 
 import ForgotPassword from '../material-ui/ForgotPassword';
 import ColorModeSelect from '../material-ui/ColorModeSelect';
 
@@ -61,67 +60,13 @@ const SignInContainer = styled(Stack)(({ theme }) => ({
   },
 }));
 
-export default function SignIn(props) {
-  const [emailError, setEmailError] = React.useState(false);
-  const [emailErrorMessage, setEmailErrorMessage] = React.useState('');
-  const [passwordError, setPasswordError] = React.useState(false);
-  const [passwordErrorMessage, setPasswordErrorMessage] = React.useState('');
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const handleSubmit = (event) => {
-    if (emailError || passwordError) {
-      event.preventDefault();
-      return;
-    }
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
-
-  const validateInputs = () => {
-    const email = document.getElementById('email');
-    const password = document.getElementById('password');
-
-    let isValid = true;
-
-    if (!email.value || !/\S+@\S+\.\S+/.test(email.value)) {
-      setEmailError(true);
-      setEmailErrorMessage('Please enter a valid email address.');
-      isValid = false;
-    } else {
-      setEmailError(false);
-      setEmailErrorMessage('');
-    }
-
-    if (!password.value || password.value.length < 6) {
-      setPasswordError(true);
-      setPasswordErrorMessage('Password must be at least 6 characters long.');
-      isValid = false;
-    } else {
-      setPasswordError(false);
-      setPasswordErrorMessage('');
-    }
-
-    return isValid;
-  };
-
+export default function SignIn() {
   return (
-    <AppTheme {...props}>
+<div className='sign-in'>
       <CssBaseline enableColorScheme />
       <SignInContainer direction="column" justifyContent="space-between">
         <ColorModeSelect sx={{ position: 'fixed', top: '1rem', right: '1rem' }} />
         <Card variant="outlined">
-          <SitemarkIcon />
           <Typography
             component="h1"
             variant="h4"
@@ -131,7 +76,7 @@ export default function SignIn(props) {
           </Typography>
           <Box
             component="form"
-            onSubmit={handleSubmit}
+            // Handle Submit
             noValidate
             sx={{
               display: 'flex',
@@ -143,8 +88,8 @@ export default function SignIn(props) {
             <FormControl>
               <FormLabel htmlFor="email">Email</FormLabel>
               <TextField
-                error={emailError}
-                helperText={emailErrorMessage}
+                 //Email Error
+                //Error Message
                 id="email"
                 type="email"
                 name="email"
@@ -154,14 +99,14 @@ export default function SignIn(props) {
                 required
                 fullWidth
                 variant="outlined"
-                color={emailError ? 'error' : 'primary'}
+                color={'primary'} // error or primary conditinalu
               />
             </FormControl>
             <FormControl>
               <FormLabel htmlFor="password">Password</FormLabel>
               <TextField
-                error={passwordError}
-                helperText={passwordErrorMessage}
+               
+               
                 name="password"
                 placeholder="••••••"
                 type="password"
@@ -171,26 +116,26 @@ export default function SignIn(props) {
                 required
                 fullWidth
                 variant="outlined"
-                color={passwordError ? 'error' : 'primary'}
+                color={'primary'}
               />
             </FormControl>
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
-            <ForgotPassword open={open} handleClose={handleClose} />
+          
+            <ForgotPassword  /> 
             <Button
               type="submit"
               fullWidth
               variant="contained"
-              onClick={validateInputs}
+              
             >
               Sign in
             </Button>
             <Link
               component="button"
               type="button"
-              onClick={handleClickOpen}
               variant="body2"
               sx={{ alignSelf: 'center' }}
             >
@@ -228,6 +173,9 @@ export default function SignIn(props) {
           </Box>
         </Card>
       </SignInContainer>
-    </AppTheme>
+      </div>
   );
-}
+ 
+};
+
+  
