@@ -10,7 +10,7 @@ const navigation = [
   { name: 'Dashboard', href: '#' },
   { name: 'About', href: '#' },
   { name: 'Dev News', href: '#' },
-  { name: 'Sign In', href: '#' },
+  { name: 'Sign In', href: '/next-dev/sign-in' },
 ]
 
 export default function  Header(){
