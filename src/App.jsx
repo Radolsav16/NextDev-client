@@ -1,5 +1,4 @@
 import Hero from "./components/hero/Hero"
-import SignIn from "./components/sign-in/SignIn";
 import Statistics from "./components/statistics/Statistics"
 import Footer from "./components/footer/Footer";
 
@@ -19,7 +18,6 @@ function App() {
       <Hero />
       <Subscribe />
       <Statistics />
-      <SignIn />
       <Footer />
     </>
   )
