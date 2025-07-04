@@ -8,7 +8,7 @@ const navigation = [
   { name: 'Browse Devs', href: '#' },
   { name: 'Post Job', href: '#' },
   { name: 'Dashboard', href: '#' },
-  { name: 'About', href: '#' },
+  { name: 'About', href: '/next-dev/about' },
   { name: 'Dev News', href: '#' },
   { name: 'Sign up', href: '/next-dev/sign-up' },
 ]
@@ -43,13 +43,13 @@ export default function  Header(){
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm/6 font-semibold text-gray-900">
+              <Link key={item.name} to={item.href} className="text-sm/6 font-semibold text-gray-900">
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link to="/next-dev/sign-up" className="text-sm/6 font-semibold text-gray-900">
+            <Link to="/next-dev/sign-in" className="text-sm/6 font-semibold text-gray-900">
               Sign in <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
@@ -58,14 +58,14 @@ export default function  Header(){
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
+              <Link to="/" className="-m-1.5 p-1.5">
+                <span className="sr-only">NextDev</span>
                 <img
                   alt=""
                   src="/next-dev.png"
                   className="h-8 w-auto"
                 />
-              </a>
+              </Link>
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
