@@ -13,6 +13,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { FormProvider } from "./providers/FormProvider";
+import NotFound from "./components/not-found/NotFound";
 
 
 
@@ -41,6 +42,10 @@ function App() {
     
       <Route path="/next-dev/sign-up" element={<SignUp />}/>
       <Route path="/next-dev/about" element={<About />}/>
+
+
+      <Route path="*" element={<NotFound />}/>
+
 
      
 
