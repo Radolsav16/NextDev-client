@@ -1,5 +1,6 @@
 import Header from "../header/Header";
 import { Link } from "react-router";
+
 export default function Hero() {
  
   return (
@@ -22,10 +23,10 @@ export default function Hero() {
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
               Bridge the Gap Between Talent and Opportunity.{' '}
-              <a href="#" className="font-semibold text-indigo-600">
+              <Link to="/next-dev/about" className="font-semibold text-indigo-600">
                 <span aria-hidden="true" className="absolute inset-0" />
                 Read more <span aria-hidden="true">&rarr;</span>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="text-center">
@@ -37,12 +38,12 @@ export default function Hero() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
-                to="/"
+                to="/next-dev/sign-in"
                 className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Get started
               </Link>
-              <Link to="/" className="text-sm/6 font-semibold text-gray-900">
+              <Link to="/next-dev/about" className="text-sm/6 font-semibold text-gray-900">
                 Learn more <span aria-hidden="true">→</span>
               </Link>
             </div>

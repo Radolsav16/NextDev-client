@@ -6,16 +6,17 @@ import {
   MapPinIcon,
   UserCircleIcon,
 } from '@heroicons/react/24/outline';
+import FormInput from '../form-helpers/FormInput';
+import LogoInput from '../form-helpers/LogoInput';
 
 export default function EmpForm() {
-  const [description, setDescription] = useState('');
-  const maxDesc = 500;
+  
 
   return (
     
     <>
       <div className="grid grid-cols-1 gap-6">
-        {/* Company Name */}
+       
         <div>
           <label htmlFor="companyName" className="block text-sm font-medium text-gray-900">
             Company Name
@@ -104,43 +105,14 @@ export default function EmpForm() {
           </p>
         </div>
 
-        {/* Company Logo Upload */}
-        <div>
-          <label htmlFor="logo" className="block text-sm font-medium text-gray-900">
-            Upload Company Logo
-          </label>
-          <div className="mt-2 flex items-center gap-4">
-            <UserCircleIcon className="h-12 w-12 text-gray-300" />
-            <label
-              htmlFor="logo"
-              className="cursor-pointer rounded-md bg-blue-50 px-4 py-2 font-medium text-blue-600 hover:bg-blue-100"
-            >
-              Choose file
-              <input
-                id="logo"
-                name="logo"
-                type="file"
-                accept=".png,.jpg,.jpeg"
-                className="sr-only"
-              />
-            </label>
-            <span className="text-sm text-gray-500">PNG, JPG up to 2MB</span>
-          </div>
-        </div>
 
-        {/* Industry */}
-        <div>
-          <label htmlFor="industry" className="block text-sm font-medium text-gray-900">
-            Industry
-          </label>
-          <input
-            type="text"
-            name="industry"
-            id="industry"
-            placeholder="e.g. Software, Finance, Healthcare"
-            className="mt-2 block w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none"
-          />
-        </div>
+      
+        <LogoInput />
+
+  
+  
+
+        <FormInput label={"Industry"} name={"industry"} id={"industry"} placeholder={"Software, Finance, Healthcare"}/>
 
        
        
