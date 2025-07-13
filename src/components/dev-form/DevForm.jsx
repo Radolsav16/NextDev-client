@@ -4,6 +4,7 @@ import PhotoFormInput from "../form-helpers/PhotoFormInput";
 import UploadCVInput from "../form-helpers/UploadCVInput";
 import GithubInput from "../form-helpers/GithubInput";
 import LinkedInput from "../form-helpers/LinkedInInput";
+import { useForm } from "../../hooks/useForm";
 
 const inputs = [
   {
@@ -27,7 +28,15 @@ const inputs = [
   },
 ];
 
+
 export default function DevForm() {
+ 
+ const {state,handleChange,submit} = useForm()
+
+ 
+  
+
+ 
   return (
     <>
       <div className="space-y-6">
@@ -39,16 +48,20 @@ export default function DevForm() {
             id={i.id}
             placeholder={i.placeholder}
             type={i?.type}
+            value={state[i.name]}
+            onChange={handleChange}
           />
         ))}
       </div>
 
       <FormTextArea
-        label={"About"}
-        name={"about"}
-        id={"about"}
+        label={"Bio"}
+        name={"bio"}
+        id={"bio"}
         rows={3}
         placeholder={"Tell us a bit about yourself..."}
+        value={state.bio}
+        onChange={handleChange}
       />
 
       <PhotoFormInput />
@@ -56,9 +69,20 @@ export default function DevForm() {
       <UploadCVInput />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <GithubInput />
-        <LinkedInput />
+        <GithubInput value={state.github_url} onChange={handleChange}/>
+        <LinkedInput value={state.linkedIn_url} onChange={handleChange}/>
       </div>
+
+      <FormTextArea
+        label={"Skills"}
+        name={"skills"}
+        id={"skills"}
+        rows={5}
+        placeholder={"HTML, CSS, JavaScript"}
+        value={state.skills}
+        onChange={handleChange}
+      />
+
 
       <FormTextArea
         label={"Projects (links)"}
@@ -66,6 +90,8 @@ export default function DevForm() {
         id={"projects"}
         rows={5}
         placeholder={"https://next-dev.com"}
+        value={state.projects}
+        onChange={handleChange}
       />
 
       <div className="mt-8 flex justify-end gap-4 mt-20">
@@ -78,6 +104,7 @@ export default function DevForm() {
         <button
           type="submit"
           className="px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-md hover:bg-blue-700"
+          onClick={submit}
         >
           Save Profile
         </button>
