@@ -4,6 +4,8 @@ export default function FormTextArea({
   id,
   rows,
   placeholder,
+  value,
+  onChange
 }) {
   return (
     <div>
@@ -14,8 +16,10 @@ export default function FormTextArea({
         id={id}
         name={name}
         rows={rows}
+        onChange={onChange}
         className="mt-2 block w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none"
         placeholder={placeholder}
+        value={value}
       />
     </div>
   );

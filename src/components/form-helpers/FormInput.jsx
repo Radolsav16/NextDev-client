@@ -1,4 +1,4 @@
-export default function FormInput({label,name,id,placeholder,type = 'text'}) {
+export default function FormInput({label,name,id,placeholder,type = 'text',value,onChange}) {
   return (
     <div>
       <label
@@ -14,6 +14,8 @@ export default function FormInput({label,name,id,placeholder,type = 'text'}) {
           id={id}
           placeholder={placeholder}
           className="flex-1 block w-full px-3 py-2 focus:outline-none"
+          value={value}
+          onChange={onChange}
         />
       </div>
     </div>

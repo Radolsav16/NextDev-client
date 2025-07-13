@@ -5,8 +5,10 @@ import { useFormContext } from "../contexts/form";
 
 
 
+
 export default function SignUp() {
     const {isDev} = useFormContext()
+
   return (
     <form className="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow py-12 mt-20">
         <RoleSelect/>
